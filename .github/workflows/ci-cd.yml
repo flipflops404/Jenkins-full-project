@@ -14,7 +14,7 @@ on:
   workflow_dispatch:                   # lets you run it manually from the Actions tab
 
 env:
-  IMAGE_NAME: YOUR_DOCKERHUB_USERNAME/ultimate-cicd   # <-- CHANGE THIS
+  IMAGE_NAME: johnay/ultimate-cicd   # <-- CHANGE THIS
   APP_DIR: spring-boot-app
   MANIFESTS_DIR: spring-boot-app-manifests
 
