@@ -44,7 +44,13 @@ jobs:
       - name: Build and Test (Maven)
         working-directory: ${{ env.APP_DIR }}
         run: mvn -B clean package
-
+        
+      - name: Set up JDK 17 (for the SonarQube scanner)
+        if: ${{ env.SONAR_TOKEN != '' }}
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
       # Skips automatically if you haven't added the SONAR_TOKEN secret yet.
       - name: Static Code Analysis (SonarQube)
         if: ${{ env.SONAR_TOKEN != '' }}
