@@ -12,8 +12,8 @@ public class StartApplication {
 
     @GetMapping("/")
     public String index(final Model model) {
-        model.addAttribute("title", "John Was Here");
-        model.addAttribute("msg", "So was Rashed & Abdallah x_x");
+        model.addAttribute("title", "abdallah halwany Was Here");
+        model.addAttribute("msg", "So was adel & wzery x_x");
         return "index";
     }
 
